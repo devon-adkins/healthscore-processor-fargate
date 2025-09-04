@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HealthScore.Processor.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+72105babf8f9133ae83920d038ea438595a4f230")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ec1a2379ee545b217f63ac75ce7d51e32552b101")]
 [assembly: System.Reflection.AssemblyProductAttribute("HealthScore.Processor.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HealthScore.Processor.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

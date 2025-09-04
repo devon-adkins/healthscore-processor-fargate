@@ -1,0 +1,54 @@
+name: Branch and Commit Validation
+
+on:
+  push:
+
+jobs:
+  validate-branch-and-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Validate Branch Name
+        run: |
+          BRANCH_NAME="${GITHUB_REF#refs/heads/}"
+          BRANCH_REGEX="^(nonprod|staging|testing|dev-qa|demo|dev|main|(feature|bugfix|task|release|hotfix|docs|feat)\/[A-Z]{1,10}-[0-9]{1,10}([-_][a-zA-Z0-9]+)*)$"
+
+          echo "Validating branch name: $BRANCH_NAME"
+          if [[ ! "$BRANCH_NAME" =~ $BRANCH_REGEX ]]; then
+            echo "Error: Branch name '$BRANCH_NAME' does not comply with the required naming convention."
+            echo "Expected format:"
+            echo "- Must be one of 'staging', 'testing', 'demo', ,'dev-qa', 'dev'."
+            echo "- OR must follow 'prefix/JIRA-ID-description' format, where:"
+            echo "  - Prefix is one of 'feature', 'bugfix', 'task', 'release', 'hotfix', 'docs', or 'feat'."
+            echo "  - JIRA-ID is an uppercase identifier (1-10 letters) followed by a number 0-9(10 numbers max)  (e.g., DEVOPS-123)."
+            echo "  - Description can contain alphanumeric characters, dashes, or underscores."
+            echo "  - The branch name can not end on '-' or '_'  "
+            echo "  - You can have multiple Description options as below : "
+            echo "             - DEVOPS-123-1"
+            echo "             - DEVOPS-123-132123"
+            echo "             - DEVOPS-123_Making_a_change"
+            echo "             - DEVOPS-123-Making_another-Change-123"
+            exit 1
+          fi
+          echo "Branch name '$BRANCH_NAME' is valid."
+
+          ################
+      - name: Validate Commit Message
+        run: |
+          COMMIT_MESSAGE=$(git log -1 --pretty=%B)
+          COMMIT_REGEX="(.*([A-Z]+\-[0-9]{1,10}).*)|(Update deployment image tag to.*)|(Merge branch.*)|(Merge pull request.*)"
+
+          echo "Validating commit message: $COMMIT_MESSAGE"
+          if [[ ! "$COMMIT_MESSAGE" =~ $COMMIT_REGEX ]]; then
+            echo "Error: Commit message does not comply with the required format."
+            echo "Expected format:"
+            echo "- Must include a JIRA-style ticket reference (e.g., 'DEVOPS-123: Fix bug')."
+            echo "- OR must match one of these patterns:"
+            echo "  - 'Update deployment image tag to...' (e.g., 'Update deployment image tag to 1.0.0')."
+            echo "  - 'Merge branch...' (e.g., 'Merge branch feature/DEVOPS-123 into main')."
+            exit 1
+          fi
+          echo "Commit message is valid."
+          
