@@ -32,7 +32,7 @@ jobs:
           role-to-assume: arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/${{ env.ROLE_NAME }}
           aws-region: ${{ env.AWS_REGION }}
 
-      # Get CodeArtifact token for NuGet
+      # Get CodeArtifact token for NuGet#
       - name: Get CodeArtifact Token
         id: codeartifact
         run: |

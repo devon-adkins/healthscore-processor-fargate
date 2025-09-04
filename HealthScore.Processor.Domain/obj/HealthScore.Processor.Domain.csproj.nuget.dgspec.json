@@ -23,8 +23,7 @@
         "sources": {
           "https://api.nuget.org/v3/index.json": {},
           "https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/": {},
-          "https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json": {},
-          "https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json": {}
+          "https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {

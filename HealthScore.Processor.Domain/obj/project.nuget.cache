@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "skjn67yTcl8=",
+  "dgSpecHash": "mS9T8LY0pVM=",
   "success": false,
   "projectFilePath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,51 @@
     "/Users/devona/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.36/microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512"
   ],
   "logs": [
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.Logging.Abstractions' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Logging.Abstractions'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "projectPath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
+      "filePath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
+      "libraryId": "Microsoft.Extensions.Logging.Abstractions",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.Logging.Abstractions' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Logging.Abstractions'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "projectPath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
+      "filePath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
+      "libraryId": "Microsoft.Extensions.Logging.Abstractions",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'HealthScore.Integration' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='HealthScore.Integration'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "projectPath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
+      "filePath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
+      "libraryId": "HealthScore.Integration",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.Hosting.Abstractions' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Hosting.Abstractions'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "projectPath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
+      "filePath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
+      "libraryId": "Microsoft.Extensions.Hosting.Abstractions",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.Configuration' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Configuration'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "projectPath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
+      "filePath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
+      "libraryId": "Microsoft.Extensions.Configuration",
+      "targetGraphs": []
+    },
     {
       "code": "NU1301",
       "level": "Error",
@@ -29,15 +74,6 @@
     {
       "code": "NU1301",
       "level": "Error",
-      "message": "Failed to retrieve information about 'Microsoft.Extensions.Logging.Abstractions' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Logging.Abstractions'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
-      "projectPath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
-      "filePath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
-      "libraryId": "Microsoft.Extensions.Logging.Abstractions",
-      "targetGraphs": []
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
       "message": "Failed to retrieve information about 'Cronos' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Cronos'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
       "projectPath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
       "filePath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
@@ -56,82 +92,10 @@
     {
       "code": "NU1301",
       "level": "Error",
-      "message": "Failed to retrieve information about 'Microsoft.Extensions.Hosting.Abstractions' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Hosting.Abstractions'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
-      "projectPath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
-      "filePath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
-      "libraryId": "Microsoft.Extensions.Hosting.Abstractions",
-      "targetGraphs": []
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "Failed to retrieve information about 'HealthScore.Integration' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='HealthScore.Integration'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
-      "projectPath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
-      "filePath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
-      "libraryId": "HealthScore.Integration",
-      "targetGraphs": []
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
-      "projectPath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
-      "filePath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
-      "libraryId": "Cronos",
-      "targetGraphs": []
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
-      "projectPath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
-      "filePath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
-      "libraryId": "Cronos",
-      "targetGraphs": []
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
-      "projectPath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
-      "filePath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
-      "libraryId": "HealthScore.Core",
-      "targetGraphs": []
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
-      "projectPath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
-      "filePath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
-      "libraryId": "HealthScore.Integration",
-      "targetGraphs": []
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
       "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
       "projectPath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
       "filePath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
       "libraryId": "HealthScore.Core",
-      "targetGraphs": []
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
-      "projectPath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
-      "filePath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
-      "libraryId": "Microsoft.Extensions.Configuration",
-      "targetGraphs": []
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
-      "projectPath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
-      "filePath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
-      "libraryId": "HealthScore.Integration",
       "targetGraphs": []
     },
     {
@@ -146,16 +110,7 @@
     {
       "code": "NU1301",
       "level": "Error",
-      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
-      "projectPath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
-      "filePath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
-      "libraryId": "Microsoft.Extensions.Hosting.Abstractions",
-      "targetGraphs": []
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
       "projectPath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
       "filePath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
       "libraryId": "Microsoft.Extensions.Logging.Abstractions",
@@ -176,16 +131,7 @@
       "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
       "projectPath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
       "filePath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
-      "libraryId": "Microsoft.Extensions.Logging.Abstractions",
-      "targetGraphs": []
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
-      "projectPath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
-      "filePath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
-      "libraryId": "Cronos",
+      "libraryId": "HealthScore.Integration",
       "targetGraphs": []
     },
     {
@@ -198,12 +144,30 @@
       "targetGraphs": []
     },
     {
-      "code": "NU1900",
-      "level": "Warning",
-      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.",
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
       "projectPath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
-      "warningLevel": 1,
       "filePath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
+      "libraryId": "Microsoft.Extensions.Configuration",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
+      "projectPath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
+      "filePath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
+      "libraryId": "Cronos",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
+      "projectPath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
+      "filePath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
+      "libraryId": "Microsoft.Extensions.Logging.Abstractions",
       "targetGraphs": []
     },
     {

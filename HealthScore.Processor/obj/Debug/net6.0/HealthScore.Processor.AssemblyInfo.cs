@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HealthScore.Processor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+787932c1948996fbd7274a3bea37e93145a9c1ff")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+72105babf8f9133ae83920d038ea438595a4f230")]
 [assembly: System.Reflection.AssemblyProductAttribute("HealthScore.Processor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HealthScore.Processor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
