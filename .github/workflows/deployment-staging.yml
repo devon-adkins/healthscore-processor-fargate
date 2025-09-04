@@ -1,0 +1,95 @@
+name: Staging Healthscore Pipeline
+
+on:
+  push:
+    branches: [ staging ]
+
+permissions:
+  id-token: write
+  contents: read
+
+env:
+  AWS_REGION: us-east-2
+  AWS_ACCOUNT_ID: "657420503472"
+  ROLE_NAME: medici-staging-fargate-deployment-role
+  ECR_REGISTRY: 657420503472.dkr.ecr.us-east-2.amazonaws.com
+  REPOSITORY: medici-staging-healthscore-processor-repo
+  CLUSTER: staging-medici-cluster
+  NAMESPACE: staging
+  DEPLOYMENT_NAME: medici-healthscore-processor
+  CONTAINER_NAME: medici-healthscore-processor-service
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment: staging
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/${{ env.ROLE_NAME }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      # Get CodeArtifact token for NuGet
+      - name: Get CodeArtifact Token
+        id: codeartifact
+        run: |
+          TOKEN=$(aws codeartifact get-authorization-token \
+            --domain medici \
+            --domain-owner 540003943876 \
+            --region $AWS_REGION \
+            --query authorizationToken \
+            --output text)
+          echo "token=$TOKEN" >> $GITHUB_OUTPUT
+
+      # Ensure target repo exists
+      - run: |
+          aws ecr describe-repositories --repository-names "${{ env.REPOSITORY }}" \
+            || aws ecr create-repository --repository-name "${{ env.REPOSITORY }}"
+
+      # Login to ECR account (staging)
+      - run: |
+          aws ecr get-login-password --region $AWS_REGION \
+            | docker login --username AWS --password-stdin $ECR_REGISTRY
+
+      # Login to old ECR (for cached base image)
+      - run: |
+          aws ecr get-login-password --region $AWS_REGION \
+            | docker login --username AWS \
+              --password-stdin 540003943876.dkr.ecr.$AWS_REGION.amazonaws.com
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+        with:
+          install: true
+          driver: docker-container
+
+      - id: meta
+        run: |
+          echo "sha=${GITHUB_SHA::7}" >> $GITHUB_OUTPUT
+          echo "run=${GITHUB_RUN_NUMBER}" >> $GITHUB_OUTPUT
+
+      # Build & push image using BuildKit secret for CodeArtifact
+      - name: Build & push image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: |
+            ${{ env.ECR_REGISTRY }}/${{ env.REPOSITORY }}:latest
+            ${{ env.ECR_REGISTRY }}/${{ env.REPOSITORY }}:${{ steps.meta.outputs.run }}
+            ${{ env.ECR_REGISTRY }}/${{ env.REPOSITORY }}:${{ steps.meta.outputs.sha }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          secrets: |
+            CODEARTIFACT_AUTH_TOKEN=${{ steps.codeartifact.outputs.token }}
+
+      # Deploy steps (uncomment if you want automatic rollout to EKS)
+      # - run: aws eks update-kubeconfig --name $CLUSTER --region $AWS_REGION
+      # - run: |
+      #     IMAGE="${{ env.ECR_REGISTRY }}/${{ env.REPOSITORY }}:${{ steps.meta.outputs.sha }}"
+      #     kubectl -n $NAMESPACE set image deployment/$DEPLOYMENT_NAME \
+      #       $CONTAINER_NAME=$IMAGE
+      #     kubectl -n $NAMESPACE rollout status deployment/$DEPLOYMENT_NAME --timeout=180s

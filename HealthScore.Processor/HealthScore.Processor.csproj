@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>dotnet-HealthScore.Processor-5EBFE344-1BF6-43CB-8A8D-00C80CE77D5C</UserSecretsId>
+        <RootNamespace>HealthScore.Processor</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AWS.Logger.AspNetCore" Version="3.4.1" />
+        <PackageReference Include="Cronos" Version="0.7.1" />
+        <PackageReference Include="MassTransit" Version="8.0.5" />
+        <PackageReference Include="MassTransit.RabbitMQ" Version="8.0.5" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.7" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+        <PackageReference Include="Serilog.AspNetCore" Version="6.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\HealthScore.Processor.Domain\HealthScore.Processor.Domain.csproj" />
+    </ItemGroup>
+</Project>

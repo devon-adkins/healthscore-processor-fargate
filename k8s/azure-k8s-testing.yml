@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: healthscore-processor
+  namespace: testing
+  labels:
+    app: healthscore-processor
+    tier: backend
+    type: microservice
+    environment: testing
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      service: healthscore-processor
+  template:
+    metadata:
+      labels:
+        app: healthscore-processor
+        service: healthscore-processor
+    spec:
+      containers:
+        - name: healthscore-processor
+          image: medicihealthscore.azurecr.io/healthscore-processor:#{Build.BuildNumber}#
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+              protocol: TCP
+          env:
+            - name: DOTNET_ENVIRONMENT
+              value: Testing
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 250m
+              memory: 256Mi
+          volumeMounts:
+            - name: processor-appsettings-secret
+              mountPath: /app/HealthScore.Processor/appsettings.Testing.json
+              subPath: appsettings.Testing.json
+      volumes:
+        - name: processor-appsettings-secret
+          secret:
+            secretName: processor-appsettings-testing
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: healthscore-processor
+  namespace: testing
+  labels:
+    app: healthscore-processor
+    service: healthscore-processor
+spec:
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+  selector:
+    service: healthscore-processor

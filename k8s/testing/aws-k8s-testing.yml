@@ -1,0 +1,82 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: healthscore-processor
+    environment: testing
+    tier: backend
+    type: microservice
+  name: healthscore-processor
+  namespace: healthscore-testing
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      service: healthscore-processor
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: healthscore-processor
+        service: healthscore-processor
+    spec:
+      containers:
+        - name: healthscore-processor
+          image: 540003943876.dkr.ecr.us-east-2.amazonaws.com/healthscore/processor:#{Build.BuildNumber}#
+          imagePullPolicy: Always
+          env:
+            - name: DOTNET_ENVIRONMENT
+              value: Testing
+          ports:
+            - containerPort: 80
+              protocol: TCP
+          resources:
+            limits:
+              cpu: 500m
+              memory: 1280Mi
+            requests:
+              cpu: 250m
+              memory: 256Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+            - name: processor-appsettings-secret
+              mountPath: /app/HealthScore.Processor/appsettings.Testing.json
+              subPath: appsettings.Testing.json
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      terminationGracePeriodSeconds: 30
+      volumes:
+        - name: processor-appsettings-secret
+          secret:
+            secretName: processor-appsettings-testing
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: healthscore-processor
+    service: healthscore-processor
+  name: healthscore-processor
+  namespace: healthscore-testing
+spec:
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+    - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+  selector:
+    service: healthscore-processor
+  sessionAffinity: None
+  type: NodePort

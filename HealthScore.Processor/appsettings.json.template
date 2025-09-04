@@ -1,0 +1,40 @@
+{
+  "RabbitMQ": {
+    "Host": "#{processor-rabbitmq-host}#",
+    "Username": "#{processor-rabbitmq-username}#",
+    "Password": "#{processor-rabbitmq-password}#"
+  },
+  "Jwt": {
+    "Key": "#{processor-jwt-key}#",
+    "Issuer": "#{processor-jwt-issuer}#",
+    "Audience": "#{processor-jwt-audience}#"
+  },
+  "HealthScoreSystem": {
+    "PermissionKeyDurationMinutes": "#{processor-healthscoresystem-permissionkeydurationminutes}#",
+    "Identity": {
+      "Token": "#{processor-healthscoresystem-identity-token}#"
+    },
+    "Client": {
+      "Id": "#{processor-healthscoresystem-client-id}#",
+      "Secret": "#{processor-healthscoresystem-client-secret}#"
+    },
+    "Microservices": {
+      "IdentityBaseUrl": "#{processor-healthscoresystem-microservices-identitybaseurl}#",
+      "ClientsBaseUrl": "#{processor-healthscoresystem-microservices-clientsbaseurl}#",
+      "PatientsBaseUrl": "#{processor-healthscoresystem-microservices-patientsbaseurl}#",
+      "AccountsBaseUrl": "#{processor-healthscoresystem-microservices-accountsbaseurl}#",
+      "ConfigurationsBaseUrl": "#{processor-healthscoresystem-microservices-configurationsbaseurl}#",
+      "CommunicationsBaseUrl": "#{processor-healthscoresystem-microservices-communicationsbaseurl}#",
+      "MeasurementsBaseUrl": "#{processor-healthscoresystem-microservices-measurementsbaseurl}#",
+      "ProvidersBaseUrl": "#{processor-healthscoresystem-microservices-providersbaseurl}#",
+      "ContentBaseUrl": "#{processor-healthscoresystem-microservices-contentbaseurl}#"
+    }
+  },
+  "Aws": {
+    "Region": "#{api-aws-region}#",
+    "LogGroup": "#{api-aws-loggroup}#",
+    "AccessKeyId": "#{api-aws-accesskeyid}#",
+    "SecretAccessKey": "#{api-aws-secretaccesskey}#"
+  },
+  "AccessCodes": "{api-accesscodes}"
+}

@@ -1,0 +1,25 @@
+
+pool:
+  vmImage: 'ubuntu-latest'  # You can choose a different VM image as per your requirement
+
+variables:
+- group: BITBUCKET
+
+steps:
+- checkout: self
+  fetchDepth: 0
+  persistCredentials: true  # To use the credentials throughout the pipeline
+
+- script: |
+    git config --global user.email "$(Build.RequestedForEmail)"  # Using the email of the user who triggered the build
+    git config --global user.name "$(Build.RequestedFor)"  # Using the name of the user who triggered the build
+  displayName: 'Configure Git'
+
+- script: |
+    echo "Pushing to remote Bitbucket repository "
+    echo $(BITBUCKET_TOKEN)
+    git checkout $(Build.SourceBranchName)
+    git remote add bitbucket "https://x-token-auth:$(BITBUCKET_TOKEN)@bitbucket.org/medi-ci/$(Build.Repository.Name).git"
+    git push bitbucket $(Build.SourceBranchName)
+
+  displayName: 'Add and push to Bitbucket Remote'

@@ -1,0 +1,58 @@
+#.NET 6 Azure DevOps Pipeline
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+  awsAccessKeyId: '$(AWS_ACCESS_KEY_ID)'
+  awsSecretAccessKey: '$(AWS_SECRET_ACCESS_KEY)'
+
+steps:
+#Update assembly info
+- task: Assembly-Info-NetCore@3
+  inputs:
+    Path: '$(Build.SourcesDirectory)'
+    FileNames: '**/*.csproj'
+    InsertAttributes: false
+    FileEncoding: 'auto'
+    WriteBOM: false
+    InformationalVersion: '$(Build.BuildNumber)'
+    LogLevel: 'verbose'
+    FailOnWarning: false
+    DisableTelemetry: false
+
+# Build the project
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '6.0.x'
+- script: dotnet build --configuration $(buildConfiguration)
+  displayName: 'Build Project'
+
+# Build docker image
+- task: Docker@2
+  inputs:
+    containerRegistry: 'healthscore-container-registry'
+    repository: 'healthscore-processor'
+    command: 'build'
+    tags: $(Build.BuildNumber)
+    Dockerfile: 'Dockerfile.yml'
+
+# Push docker image to Amazon ECR
+- task: ECRPushImage@1
+  inputs:
+    awsCredentials: 'aws-ecr'
+    regionName: 'us-east-2'
+    imageSource: 'imagename'
+    sourceImageName: 'medicihealthscore.azurecr.io/healthscore-processor'
+    sourceImageTag: '$(Build.BuildNumber)'
+    repositoryName: 'healthscore/processor'
+    pushTag: '$(Build.BuildNumber)'
+
+#Publish Kubernetes files    
+- publish: k8s
+  artifact: k8s
