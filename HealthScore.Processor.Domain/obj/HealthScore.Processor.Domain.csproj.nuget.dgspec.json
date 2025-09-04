@@ -1,0 +1,123 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj": {}
+  },
+  "projects": {
+    "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
+        "projectName": "HealthScore.Processor.Domain",
+        "projectPath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj",
+        "packagesPath": "/Users/devona/.nuget/packages/",
+        "outputPath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/devona/healthscore-processor-fargate/NuGet.Config",
+          "/Users/devona/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/": {},
+          "https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json": {},
+          "https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Cronos": {
+              "target": "Package",
+              "version": "[0.7.1, )"
+            },
+            "Hashids.net": {
+              "target": "Package",
+              "version": "[1.6.1, )"
+            },
+            "HealthScore.Core": {
+              "target": "Package",
+              "version": "[1.0.1169-CI-20240105-143743, )"
+            },
+            "HealthScore.Integration": {
+              "target": "Package",
+              "version": "[1.0.1202-CI-20240110-133954, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.304/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

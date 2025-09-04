@@ -1,0 +1,703 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "AWS.Logger.AspNetCore >= 3.4.1",
+      "Cronos >= 0.7.1",
+      "MassTransit >= 8.0.5",
+      "MassTransit.RabbitMQ >= 8.0.5",
+      "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.7",
+      "Microsoft.Extensions.Hosting >= 6.0.1",
+      "Newtonsoft.Json >= 13.0.1",
+      "Serilog.AspNetCore >= 6.0.1"
+    ]
+  },
+  "packageFolders": {
+    "/Users/devona/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor/HealthScore.Processor.csproj",
+      "projectName": "HealthScore.Processor",
+      "projectPath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor/HealthScore.Processor.csproj",
+      "packagesPath": "/Users/devona/.nuget/packages/",
+      "outputPath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/devona/healthscore-processor-fargate/NuGet.Config",
+        "/Users/devona/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {},
+        "https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/": {},
+        "https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json": {},
+        "https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj": {
+              "projectPath": "/Users/devona/healthscore-processor-fargate/HealthScore.Processor.Domain/HealthScore.Processor.Domain.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "AWS.Logger.AspNetCore": {
+            "target": "Package",
+            "version": "[3.4.1, )"
+          },
+          "Cronos": {
+            "target": "Package",
+            "version": "[0.7.1, )"
+          },
+          "MassTransit": {
+            "target": "Package",
+            "version": "[8.0.5, )"
+          },
+          "MassTransit.RabbitMQ": {
+            "target": "Package",
+            "version": "[8.0.5, )"
+          },
+          "Microsoft.AspNetCore.Authentication.JwtBearer": {
+            "target": "Package",
+            "version": "[6.0.7, )"
+          },
+          "Microsoft.Extensions.Hosting": {
+            "target": "Package",
+            "version": "[6.0.1, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.1, )"
+          },
+          "Serilog.AspNetCore": {
+            "target": "Package",
+            "version": "[6.0.1, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.36, 6.0.36]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.osx-arm64",
+            "version": "[6.0.36, 6.0.36]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.36, 6.0.36]"
+          }
+        ],
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.304/RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.Configuration' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Configuration'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Configuration"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.Hosting' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Hosting'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Hosting"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.Hosting' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Hosting'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Hosting"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'HealthScore.Core' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='HealthScore.Core'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "HealthScore.Core"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.Configuration' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Configuration'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Configuration"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.Logging.Abstractions' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Logging.Abstractions'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Logging.Abstractions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Cronos' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Cronos'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Cronos"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Cronos' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Cronos'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Cronos"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.Hosting.Abstractions' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Hosting.Abstractions'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Hosting.Abstractions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.Hosting.Abstractions' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Hosting.Abstractions'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Hosting.Abstractions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'HealthScore.Integration' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='HealthScore.Integration'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "HealthScore.Integration"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.Configuration.FileExtensions' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Configuration.FileExtensions'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Configuration.FileExtensions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.Configuration.FileExtensions' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Configuration.FileExtensions'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Configuration.FileExtensions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.Configuration.EnvironmentVariables' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Configuration.EnvironmentVariables'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Configuration.EnvironmentVariables"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.Configuration.EnvironmentVariables' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Configuration.EnvironmentVariables'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Configuration.EnvironmentVariables"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.Configuration.CommandLine' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Configuration.CommandLine'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Configuration.CommandLine"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.Configuration.CommandLine' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Configuration.CommandLine'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Configuration.CommandLine"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.Configuration.Json' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Configuration.Json'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Configuration.Json"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.Configuration.Json' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Configuration.Json'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Configuration.Json"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.Configuration.UserSecrets' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Configuration.UserSecrets'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Configuration.UserSecrets"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.Configuration.UserSecrets' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Configuration.UserSecrets'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Configuration.UserSecrets"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.FileProviders.Abstractions' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.FileProviders.Abstractions'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.FileProviders.Abstractions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.FileProviders.Abstractions' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.FileProviders.Abstractions'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.FileProviders.Abstractions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.FileProviders.Physical' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.FileProviders.Physical'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.FileProviders.Physical"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.FileProviders.Physical' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.FileProviders.Physical'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.FileProviders.Physical"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.Logging.Configuration' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Logging.Configuration'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Logging.Configuration"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.Logging.Configuration' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Logging.Configuration'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Logging.Configuration"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.Logging.Debug' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Logging.Debug'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Logging.Debug"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.Logging.Debug' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Logging.Debug'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Logging.Debug"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.Logging.Console' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Logging.Console'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Logging.Console"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.Logging.Console' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Logging.Console'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Logging.Console"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.Logging.EventLog' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Logging.EventLog'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Logging.EventLog"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.Logging.EventLog' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Logging.EventLog'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Logging.EventLog"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.Logging.EventSource' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Logging.EventSource'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Logging.EventSource"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Extensions.Logging.EventSource' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='Microsoft.Extensions.Logging.EventSource'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Logging.EventSource"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Hosting"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'System.Text.Json' from remote source 'https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/FindPackagesById()?id='System.Text.Json'&semVerLevel=2.0.0'.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "System.Text.Json"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Cronos"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
+      "libraryId": "Microsoft.Extensions.Hosting"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
+      "libraryId": "Cronos"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "HealthScore.Core"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "HealthScore.Integration"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
+      "libraryId": "HealthScore.Core"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Configuration"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
+      "libraryId": "HealthScore.Integration"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
+      "libraryId": "Microsoft.Extensions.Configuration"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Hosting.Abstractions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Logging.Abstractions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
+      "libraryId": "Microsoft.Extensions.Hosting.Abstractions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
+      "libraryId": "Microsoft.Extensions.Logging.Abstractions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Hosting"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
+      "libraryId": "Microsoft.Extensions.Hosting"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Cronos"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
+      "libraryId": "Cronos"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Configuration.CommandLine"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Configuration.EnvironmentVariables"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
+      "libraryId": "Microsoft.Extensions.Configuration.CommandLine"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
+      "libraryId": "Microsoft.Extensions.Configuration.EnvironmentVariables"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Configuration.FileExtensions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Configuration.Json"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
+      "libraryId": "Microsoft.Extensions.Configuration.Json"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
+      "libraryId": "Microsoft.Extensions.Configuration.FileExtensions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Configuration.CommandLine"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
+      "libraryId": "Microsoft.Extensions.Configuration.CommandLine"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Configuration.EnvironmentVariables"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
+      "libraryId": "Microsoft.Extensions.Configuration.EnvironmentVariables"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Configuration.UserSecrets"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
+      "libraryId": "Microsoft.Extensions.Configuration.UserSecrets"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Configuration.FileExtensions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
+      "libraryId": "Microsoft.Extensions.Configuration.FileExtensions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Configuration"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Configuration.Json"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
+      "libraryId": "Microsoft.Extensions.Configuration.Json"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
+      "libraryId": "Microsoft.Extensions.Configuration"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.FileProviders.Abstractions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
+      "libraryId": "Microsoft.Extensions.FileProviders.Abstractions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Hosting.Abstractions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
+      "libraryId": "Microsoft.Extensions.Hosting.Abstractions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.FileProviders.Physical"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
+      "libraryId": "Microsoft.Extensions.FileProviders.Physical"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Logging.Configuration"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
+      "libraryId": "Microsoft.Extensions.Logging.Configuration"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Logging.Debug"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Logging.EventLog"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
+      "libraryId": "Microsoft.Extensions.Logging.Debug"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
+      "libraryId": "Microsoft.Extensions.Logging.EventLog"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Logging.Console"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
+      "libraryId": "Microsoft.Extensions.Logging.Console"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Logging.EventSource"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
+      "libraryId": "Microsoft.Extensions.Logging.EventSource"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json.\n  Response status code does not indicate success: 404 (Not Found).",
+      "libraryId": "Microsoft.Extensions.Configuration.UserSecrets"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json.\n  Response status code does not indicate success: 401 (Unauthorized).",
+      "libraryId": "Microsoft.Extensions.Configuration.UserSecrets"
+    },
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://pkgs.dev.azure.com/medi-ci/_packaging/medi-ci/nuget/v3/index.json."
+    },
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://medici-540003943876.d.codeartifact.us-east-2.amazonaws.com/nuget/healthscore/v3/index.json."
+    }
+  ]
+}
